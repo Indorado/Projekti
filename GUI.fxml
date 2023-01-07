@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity"
+         minHeight="-Infinity" minWidth="-Infinity"
+         prefHeight="539.0" prefWidth="825.0"
+         tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/16"
+         xmlns:fx="http://javafx.com/fxml/1">
+    <tabs>
+        <Tab text="Etusivu">
+            <fx:include source="Etusivu.fxml"/>
+        </Tab>
+        <Tab text="Alueet">
+            <fx:include source="Alueet.fxml"/>
+        </Tab>
+        <Tab text="Varaus">
+            <fx:include source="VarausMenu.fxml"/>
+        </Tab>
+        <Tab text="Kohde">
+            <fx:include source="Kohteet.fxml"/>
+        </Tab>
+        <Tab text="Asiakas">
+            <fx:include source="AsiakasMenu.fxml"/>
+        </Tab>
+        <Tab text="Palvelut">
+            <fx:include source="PalveluMenu.fxml"/>
+        </Tab>
+    </tabs>
+</TabPane>

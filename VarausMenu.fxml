@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="513.0" prefWidth="833.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekti.VarausController">
+   <right>
+      <AnchorPane prefHeight="513.0" prefWidth="652.0" BorderPane.alignment="CENTER">
+         <TableView fx:id="tblVaraus" layoutX="1.0" layoutY="6.0" prefHeight="461.0" prefWidth="647.0">
+            <columns>
+               <TableColumn fx:id="tcVarausID" prefWidth="47.0" resizable="false" text="ID" />
+               <TableColumn fx:id="tcAsiakas" prefWidth="83.0" resizable="false" text="Asiakas" />
+               <TableColumn fx:id="tcKohde" prefWidth="77.0" resizable="false" text="Kohde" />
+               <TableColumn fx:id="tcVarPvm" prefWidth="84.0" resizable="false" text="Varaus" />
+               <TableColumn fx:id="tcVahPvm" prefWidth="84.0" resizable="false" text="Vahvistus" />
+               <TableColumn fx:id="tcAlkuPvm" prefWidth="84.0" resizable="false" text="Alku" />
+               <TableColumn fx:id="tcLuovPvm" prefWidth="84.0" resizable="false" text="Luovutus" />
+               <TableColumn fx:id="tcPalvelut" prefWidth="103.0" resizable="false" text="Palvelut" />
+            </columns>
+         </TableView>
+         <Button fx:id="btnMuokkaa_varaus" layoutX="490.0" layoutY="474.0" mnemonicParsing="false" onAction="#muokkaa" prefHeight="25.0" prefWidth="81.0" text="Muokkaa" />
+         <Button fx:id="btnPoista_varaus" layoutX="578.0" layoutY="474.0" mnemonicParsing="false" onAction="#poista" prefHeight="25.0" prefWidth="69.0" text="Poista" />
+      </AnchorPane>
+   </right>
+   <left>
+      <AnchorPane prefHeight="482.0" prefWidth="276.0" BorderPane.alignment="CENTER">
+         <Label layoutX="25.0" layoutY="79.0" text="Kohde" AnchorPane.topAnchor="79.0" />
+         <ComboBox fx:id="cbKohde" editable="true" layoutX="107.0" layoutY="75.0" maxHeight="1.7976931348623157E308" onAction="#haeKohteet" prefWidth="150.0" promptText="Kohteen nimi" />
+         <Label layoutX="25.0" layoutY="120.0" text="Asiakas" />
+         <Label layoutX="23.0" layoutY="166.0" text="Varauspvm" />
+         <Label layoutX="24.0" layoutY="211.0" text="Vahvistuspvm" />
+         <DatePicker fx:id="dtpVarauspvm" layoutX="107.0" layoutY="162.0" onAction="#tarkistaTaytto" prefHeight="25.0" prefWidth="150.0" promptText="pvm" />
+         <Separator layoutX="22.0" layoutY="141.0" prefHeight="22.0" prefWidth="237.0" />
+         <Separator layoutX="22.0" layoutY="232.0" prefHeight="22.0" prefWidth="237.0" />
+         <DatePicker fx:id="dtpAlkupvm" layoutX="107.0" layoutY="254.0" onAction="#tarkistaTaytto" prefHeight="25.0" prefWidth="150.0" promptText="pvm" />
+         <Label layoutX="23.0" layoutY="258.0" text="Alkupvm" />
+         <Separator layoutX="22.0" layoutY="317.0" prefHeight="22.0" prefWidth="237.0" />
+         <Label layoutX="24.0" layoutY="341.0" text="Palvelut" />
+         <Button fx:id="btnLisaa_varaus" layoutX="16.0" layoutY="474.0" mnemonicParsing="false" onAction="#Lisaa" prefHeight="25.0" prefWidth="54.0" text="Lisää" />
+         <DatePicker fx:id="dtpVahvistus" layoutX="107.0" layoutY="207.0" onAction="#tarkistaTaytto" prefHeight="25.0" prefWidth="150.0" promptText="pvm" />
+         <Label layoutX="22.0" layoutY="300.0" text="Luovutuspvm" />
+         <DatePicker fx:id="dtpLuovutus" layoutX="107.0" layoutY="296.0" onAction="#tarkistaTaytto" prefHeight="25.0" prefWidth="150.0" promptText="pvm" />
+         <ComboBox fx:id="cbAsiakas" cache="true" cacheHint="SCALE" cacheShape="false" editable="true" focusTraversable="false" layoutX="107.0" layoutY="116.0" maxHeight="1.7976931348623157E308" onAction="#haeAsiakkaat" prefWidth="150.0" promptText="Asiakas" />
+         <CheckBox fx:id="chbPalvelu1" layoutX="106.0" layoutY="341.0" mnemonicParsing="false" onAction="#tarkistaTaytto" prefHeight="17.0" prefWidth="152.0" text="" />
+         <CheckBox fx:id="chbPalvelu2" layoutX="106.0" layoutY="366.0" mnemonicParsing="false" onAction="#tarkistaTaytto" prefHeight="17.0" prefWidth="152.0" text="" />
+         <CheckBox fx:id="chbPalvelu3" layoutX="106.0" layoutY="390.0" mnemonicParsing="false" onAction="#tarkistaTaytto" prefHeight="17.0" prefWidth="152.0" text="" />
+         <CheckBox fx:id="chbPalvelu4" layoutX="106.0" layoutY="413.0" mnemonicParsing="false" onAction="#tarkistaTaytto" prefHeight="17.0" prefWidth="152.0" text="" />
+         <CheckBox fx:id="chbPalvelu5" layoutX="106.0" layoutY="438.0" mnemonicParsing="false" onAction="#tarkistaTaytto" prefHeight="17.0" prefWidth="152.0" text="" />
+         <Button fx:id="btnTyhjenna" layoutX="82.0" layoutY="474.0" mnemonicParsing="false" onAction="#tyhjenna" text="Tyhjennä" />
+         <Label layoutX="25.0" layoutY="41.0" text="VarausID" />
+         <TextField fx:id="tfVaraus" layoutX="108.0" layoutY="37.0" promptText="Varaus numero" />
+         <Button fx:id="btnPaivita" layoutX="156.0" layoutY="474.0" mnemonicParsing="false" onAction="#paivita" prefHeight="9.0" prefWidth="13.0">
+            <graphic>
+               <ImageView fitHeight="25.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@Kuvat/arrow.png" />
+               </ImageView>
+            </graphic>
+         </Button>
+      </AnchorPane>
+   </left>
+</BorderPane>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="530.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" >
+    <children>
+        <ImageView fitHeight="537.0" fitWidth="871.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@vn.JPG" />
+            </image>
+        </ImageView>
+        <Label layoutX="137.0" layoutY="424.0" text="Tervetuloa käyttämään" />
+        <Label layoutX="86.0" layoutY="445.0" text="Village Newbies Oy'n varaussovellusta" />
+    </children>
+</AnchorPane>

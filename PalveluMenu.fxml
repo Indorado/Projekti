@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="510.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekti.PalveluController">
+    <AnchorPane prefHeight="510.0" prefWidth="836.0" BorderPane.alignment="CENTER">
+        <TextField fx:id="tfTyyppi" layoutX="135.0" layoutY="83.0" prefHeight="25.0" prefWidth="145.0" />
+        <Button fx:id="btnTallenna1" layoutX="5.0" layoutY="471.0" mnemonicParsing="false" onAction="#Tallenna1" text="Tallenna" />
+        <TextField fx:id="tfHinta1" layoutX="135.0" layoutY="118.0" prefHeight="25.0" prefWidth="144.0" />
+        <TextField fx:id="tfAlv1" layoutX="135.0" layoutY="152.0" prefHeight="25.0" prefWidth="144.0" />
+        <Text layoutX="24.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tyyppi" />
+        <Text layoutX="24.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hinta *" />
+        <Text layoutX="24.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alv *" />
+        <Button fx:id="btnMuokkaa1" layoutX="80.0" layoutY="471.0" mnemonicParsing="false" onAction="#Muokkaa" text="Muokkaa" />
+        <Text layoutX="24.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Toiminta-alue id *" />
+        <Text layoutX="24.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nimi *" />
+        <Text layoutX="24.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kuvaus" />
+        <TextField fx:id="tfAlue1" layoutX="135.0" layoutY="14.0" prefHeight="25.0" prefWidth="146.0" />
+        <TextField fx:id="tfNimi1" layoutX="135.0" layoutY="47.0" prefHeight="25.0" prefWidth="146.0" />
+        <TextArea fx:id="taKuvaus1" layoutX="135.0" layoutY="241.0" prefHeight="107.0" prefWidth="267.0" />
+        <TableView fx:id="table" layoutX="435.0" layoutY="12.0" onMouseClicked="#Valittu" prefHeight="370.0" prefWidth="384.0">
+            <columns>
+                <TableColumn fx:id="sar_nimi" prefWidth="142.0" text="Nimi" />
+                <TableColumn fx:id="sar_ta" prefWidth="104.0" text="Toiminta-alue" />
+                <TableColumn fx:id="sar_tyyppi" prefWidth="63.0" text="Tyyppi" />
+                <TableColumn fx:id="sar_hinta" prefWidth="72.0" text="Hinta" />
+            </columns>
+        </TableView>
+        <Button layoutX="767.0" layoutY="382.0" mnemonicParsing="false" onAction="#PoistaPalvelu" text="Poista" />
+        <Button layoutX="435.0" layoutY="382.0" mnemonicParsing="false" text="Päivitä" />
+
+    </AnchorPane>
+</AnchorPane>
